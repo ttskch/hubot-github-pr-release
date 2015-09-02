@@ -1,0 +1,25 @@
+{
+  "name": "hubot-github-pr-release",
+  "version": "0.0.1",
+  "description": "Create a release pull request on GitHub via hubot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qckanemoto/hubot-github-pr-release.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "github-pr-release",
+    "git-pr-release"
+  ],
+  "author": "qckanemoto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qckanemoto/hubot-github-pr-release/issues"
+  },
+  "homepage": "https://github.com/qckanemoto/hubot-github-pr-release#readme"
+}
