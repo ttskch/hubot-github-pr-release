@@ -2,10 +2,11 @@
 #   Create a release pull request on GitHub via hubot.
 #
 # Configuration:
-#   HUBOT_RELEASE_GITHUB_TOKEN
+#   HUBOT_RELEASE_GITHUB_TOKEN # required
 #   HUBOT_RELEASE_HEAD # defaults to "master"
 #   HUBOT_RELEASE_BASE # defaults to "release"
 #   HUBOT_RELEASE_DEFAULT_OWNER
+#   HUBOT_RELEASE_TEMPLATE_PATH
 #
 # Commands:
 #   hubot release <owner>/<repository> - Create or update a release pull request
@@ -20,6 +21,7 @@ config =
   token: process.env.HUBOT_RELEASE_GITHUB_TOKEN
   head: process.env.HUBOT_RELEASE_HEAD or 'master'
   base: process.env.HUBOT_RELEASE_BASE or 'release'
+  template: process.env.HUBOT_RELEASE_TEMPLATE_PATH
 
 doRelease = (owner, repo, msg) ->
   msg.send 'Now processing...'

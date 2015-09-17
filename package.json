@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/qckanemoto/hubot-github-pr-release#readme",
   "dependencies": {
-    "github-pr-release": "^1.1.1",
+    "github-pr-release": "^1.2.0",
     "underscore": "^1.8.3"
   }
 }
