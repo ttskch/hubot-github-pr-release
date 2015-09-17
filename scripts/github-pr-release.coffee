@@ -17,7 +17,7 @@ release = require 'github-pr-release'
 _ = require 'underscore'
 
 config =
-  token: process.env.HUBOT_RELEASE_GITHUB_TOKEN,
+  token: process.env.HUBOT_RELEASE_GITHUB_TOKEN
   head: process.env.HUBOT_RELEASE_HEAD or 'master'
   base: process.env.HUBOT_RELEASE_BASE or 'release'
 
