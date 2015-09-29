@@ -31,7 +31,22 @@ $ export HUBOT_RELEASE_GITHUB_TOKEN="github_token_here"
 $ export HUBOT_RELEASE_HEAD="staging" # defaults to "master"
 $ export HUBOT_RELEASE_BASE="master" # defaults to "release"
 $ export HUBOT_RELEASE_DEFAULT_OWNER="qckanemoto"
+$ export HUBOT_RELEASE_TEMPLATE_PATH="/path/to/template.mustache" # absolute path only
 ```
+
+### Modify template
+
+You can use your own template of the release pull request.
+For example, following template uses the **author's** username instead of the **assignee's** one of each pull requests in the message of the release pull request.
+
+```
+Release {{version}}
+{{#prs}}
+- [ ] #{{number}} {{title}} {{#user}}@{{login}}{{/user}}
+{{/prs}}
+```
+
+See [here](https://github.com/uiureo/github-pr-release#specify-a-message-format) to learn more.
 
 ## Usage
 
