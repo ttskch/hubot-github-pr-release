@@ -12,7 +12,7 @@
 #   hubot release <owner>/<repository> - Create or update a release pull request
 #
 # Author:
-#   qckanemoto
+#   ttskch
 
 release = require 'github-pr-release'
 _ = require 'underscore'

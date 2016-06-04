@@ -30,7 +30,7 @@ $ export HUBOT_RELEASE_GITHUB_TOKEN="github_token_here"
 # optional
 $ export HUBOT_RELEASE_HEAD="staging" # defaults to "master"
 $ export HUBOT_RELEASE_BASE="master" # defaults to "release"
-$ export HUBOT_RELEASE_DEFAULT_OWNER="qckanemoto"
+$ export HUBOT_RELEASE_DEFAULT_OWNER="ttskch"
 $ export HUBOT_RELEASE_TEMPLATE_PATH="/path/to/template.mustache" # absolute path only
 ```
 
@@ -52,7 +52,7 @@ See [here](https://github.com/uiureo/github-pr-release#specify-a-message-format)
 
 ```bash
 # Create or update a release pull request
-hubot> hubot release qckanemoto/hubot-github-pr-release
+hubot> hubot release ttskch/hubot-github-pr-release
 
 # If HUBOT_RELEASE_DEFAULT_OWNER is set you can omit owner
 hubot> hubot release hubot-github-pr-release
