@@ -7,6 +7,7 @@
 #   HUBOT_RELEASE_BASE # defaults to "release"
 #   HUBOT_RELEASE_DEFAULT_OWNER
 #   HUBOT_RELEASE_TEMPLATE_PATH
+#   HUBOT_RELEASE_GITHUB_ENDPOINT # defaults to "https://api.github.com"
 #
 # Commands:
 #   hubot release <owner>/<repository> - Create or update a release pull request
@@ -22,6 +23,7 @@ config =
   head: process.env.HUBOT_RELEASE_HEAD or 'master'
   base: process.env.HUBOT_RELEASE_BASE or 'release'
   template: process.env.HUBOT_RELEASE_TEMPLATE_PATH
+  endpoint: process.env.HUBOT_RELEASE_GITHUB_ENDPOINT or 'https://api.github.com'
 
 doRelease = (owner, repo, msg) ->
   msg.send 'Now processing...'
