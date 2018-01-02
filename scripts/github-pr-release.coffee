@@ -25,8 +25,10 @@ config =
   template: process.env.HUBOT_RELEASE_TEMPLATE_PATH
   endpoint: process.env.HUBOT_RELEASE_GITHUB_ENDPOINT or 'https://api.github.com'
 
+sendMessage = process.env.HUBOT_RELEASE_SEND_MESSAGE or 'Now processing...'
+
 doRelease = (owner, repo, msg) ->
-  msg.send 'Now processing...'
+  msg.send sendMessage
   release(_.extend({owner: owner, repo: repo}, config))
     .then (pr) ->
       msg.send "Created release PR for #{owner}/#{repo}: #{pr.html_url}"
