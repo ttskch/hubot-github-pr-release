@@ -33,6 +33,7 @@ $ export HUBOT_RELEASE_BASE="master" # defaults to "release"
 $ export HUBOT_RELEASE_DEFAULT_OWNER="ttskch"
 $ export HUBOT_RELEASE_TEMPLATE_PATH="/path/to/template.mustache" # absolute path only
 $ export HUBOT_RELEASE_GITHUB_ENDPOINT="https://api.gihtub.enterprise.com" # defaults to "https://api.github.com"
+$ export HUBOT_RELEASE_MESSAGE_PROCESSING="Now processing..." #defaults to "Now processing..."
 ```
 
 ### Modify template
