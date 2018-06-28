@@ -29,7 +29,7 @@ config =
     processing: process.env.HUBOT_RELEASE_MESSAGE_PROCESSING or 'Now processing...'
 
 doRelease = (owner, repo, msg) ->
-  msg.send config.message.processing
+  msg.send config.messages.processing
   release(_.extend({owner: owner, repo: repo}, config))
     .then (pr) ->
       msg.send "Created release PR for #{owner}/#{repo}: #{pr.html_url}"
