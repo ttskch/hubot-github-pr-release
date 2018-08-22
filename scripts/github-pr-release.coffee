@@ -20,17 +20,18 @@ release = require 'github-pr-release'
 _ = require 'underscore'
 
 config =
-  token: process.env.HUBOT_RELEASE_GITHUB_TOKEN
-  head: process.env.HUBOT_RELEASE_HEAD or 'master'
-  base: process.env.HUBOT_RELEASE_BASE or 'release'
-  template: process.env.HUBOT_RELEASE_TEMPLATE_PATH
-  endpoint: process.env.HUBOT_RELEASE_GITHUB_ENDPOINT or 'https://api.github.com'
+  core:
+    token: process.env.HUBOT_RELEASE_GITHUB_TOKEN
+    head: process.env.HUBOT_RELEASE_HEAD or 'master'
+    base: process.env.HUBOT_RELEASE_BASE or 'release'
+    template: process.env.HUBOT_RELEASE_TEMPLATE_PATH
+    endpoint: process.env.HUBOT_RELEASE_GITHUB_ENDPOINT or 'https://api.github.com'
   messages:
     processing: process.env.HUBOT_RELEASE_MESSAGE_PROCESSING or 'Now processing...'
 
 doRelease = (owner, repo, msg) ->
   msg.send config.messages.processing
-  release(_.extend({owner: owner, repo: repo}, config))
+  release(_.extend({owner: owner, repo: repo}, config.core))
     .then (pr) ->
       msg.send "Created release PR for #{owner}/#{repo}: #{pr.html_url}"
     .catch (err) ->
