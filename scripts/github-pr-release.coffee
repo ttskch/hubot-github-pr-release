@@ -8,7 +8,7 @@
 #   HUBOT_RELEASE_DEFAULT_OWNER
 #   HUBOT_RELEASE_TEMPLATE_PATH
 #   HUBOT_RELEASE_GITHUB_ENDPOINT # defaults to "https://api.github.com"
-#   HUBOT_RELEASE_MESSAGE_PROCESSING # defaults to "Now processing..."   
+#   HUBOT_RELEASE_MESSAGE_PROCESSING # defaults to "Now processing..."
 #
 # Commands:
 #   hubot release <owner>/<repository> - Create or update a release pull request
